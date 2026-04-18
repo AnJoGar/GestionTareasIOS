@@ -74,25 +74,6 @@ La app se compilará e iniciará en el simulador automáticamente.
 
 La app usa `libsqlite3` del SDK de iOS directamente, **sin ninguna librería de terceros**.
 
-La base de datos se crea automáticamente en el directorio `Documents` del app sandbox:
-
-```
-Documents/TaskManager.sqlite
-```
-
-### Esquema de la tabla
-
-```sql
-CREATE TABLE IF NOT EXISTS tasks (
-    id          INTEGER PRIMARY KEY AUTOINCREMENT,
-    title       TEXT    NOT NULL,
-    description TEXT    DEFAULT '',
-    is_completed INTEGER DEFAULT 0,
-    priority    INTEGER DEFAULT 1,   -- 0=Low, 1=Medium, 2=High
-    created_at  REAL    NOT NULL,    -- Unix timestamp
-    updated_at  REAL    NOT NULL
-);
-```
 
 ### Operaciones implementadas
 
